@@ -3,11 +3,11 @@
 
 Name:           ruby
 Version:        %{rubyver}
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        Ruby License/GPL - see COPYING
 URL:            http://www.ruby-lang.org/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires:  readline readline-devel ncurses ncurses-devel gdbm gdbm-devel glibc-devel tcl-devel gcc unzip openssl-devel db4-devel byacc make libyaml libyaml-devel libffi libffi-devel
+BuildRequires:  readline readline-devel ncurses ncurses-devel gdbm gdbm-devel glibc-devel tcl-devel gcc unzip openssl-devel db4-devel byacc make libyaml libffi
 Source0:        ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{rubyver}.tar.gz
 Summary:        An interpreter of object-oriented scripting language
 Group:          Development/Languages
@@ -64,5 +64,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*
 
 %changelog
-* Web Apr 15 2015 Tony Doan <tdoan@tdoan.com> - 2.2.2
+* Tue Jul 14 2015 Tony Doan <tdoan@tdoan.com> - 2.2.2-2
+- Fix BuildRequires
+- Fix previous changelog date entry
+
+* Wed Apr 15 2015 Tony Doan <tdoan@tdoan.com> - 2.2.2
 - Update ruby version to 2.2.2
+
+* Tue Apr 14 2015 Johnson Earls <johnson.earls@oracle.com> - 2.1.5-2
+- Fix Obsoletes header lines to allow for ruby package updates
